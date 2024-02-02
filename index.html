@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анкета відвідувача готелю</title>
+</head>
+<body>
+
+<form action="#" method="post" enctype="multipart/form-data">
+
+  <fieldset>
+    <legend>Контактна інформація</legend>
+
+    <label for="fullName">Повне ім'я:</label>
+    <input type="text" id="fullName" name="fullName" required placeholder="Введіть ваше повне ім'я"><br>
+
+    <label for="email">Електронна пошта:</label>
+    <input type="email" id="email" name="email" required autocomplete="off" placeholder="Введіть вашу електронну пошту"><br>
+
+    <label for="phoneNumber">Номер телефону:</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="Введіть ваш номер телефону" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Деталі бронювання</legend>
+
+    <label for="checkInDate">Дата заїзду:</label>
+    <input type="date" id="checkInDate" name="checkInDate" required><br>
+
+    <label for="stayDuration">Тривалість перебування (днів):</label>
+    <input type="number" id="stayDuration" name="stayDuration" required min="1"><br>
+
+    <label for="roomRating">Рейтинг номеру (1-10):</label>
+    <input type="range" id="roomRating" name="roomRating" required min="1" max="10">
+
+    <label for="favoriteColor">Улюблений колір:</label>
+    <input type="color" id="favoriteColor" name="favoriteColor" required>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Відгук</legend>
+
+    <label for="overallExperience">Загальне враження (1-10):</label>
+    <input type="number" id="overallExperience" name="overallExperience" required min="1" max="10">
+
+    <label for="comments">Коментарі:</label>
+    <textarea id="comments" name="comments" required placeholder="Введіть ваші коментарі тут." spellcheck="false"></textarea>
+
+    <label for="favoriteTransport">Улюблений транспорт:</label>
+    <select id="favoriteTransport" name="favoriteTransport" required>
+      <optgroup label="Наземний транспорт">
+        <option value="car">Автомобіль</option>
+        <option value="bike">Велосипед</option>
+      </optgroup>
+      <optgroup label="Водний транспорт">
+        <option value="boat">Човен</option>
+        <option value="ship">Корабель</option>
+      </optgroup>
+    </select><br>
+
+    <label for="fileUpload">Завантажити файли:</label>
+    <input type="file" id="fileUpload" name="fileUpload" multiple><br>
+
+    <label for="progress">Прогрес:</label>
+    <progress id="progress" value="50" max="100"></progress>
+
+    <label for="meter">Вимірник:</label>
+    <meter id="meter" value="30" min="0" max="100">30%</meter>
+
+  </fieldset>
+
+  <button type="submit">Надіслати</button>
+
+</form>
+
+</body>
+</html>
